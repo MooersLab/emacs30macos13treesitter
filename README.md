@@ -44,7 +44,7 @@ system-configuration-features RET
 
 ## Check for tree_sitter
 
-The entry of RETURN will return the following list of features that were compiled with Emacs.
+The entry of RETURN on the last line of the code listing above will return the following list of features that were compiled with Emacs.
 This list may appear is a separate buffer.
 Note the presence of `TREE_SITTER`.
 
