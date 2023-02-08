@@ -11,7 +11,8 @@ It does not seem to have been incorporated by the electronic notebooks yet.
 You must installed tree-sitter C library before compiling Emacs.
 The [emacs-tree-sitter.el](https://github.com/emacs-tree-sitter/elisp-tree-sitter) package is built into Emacs29 and 30 but not the C library.
 I installed the tree-sitter C library with macports and with homebrew.
-I am not sure which was used when execting the code below.
+I am not sure which was used when compiling Emacs.
+I had also installed imagemagick with macports or homebrew a long time ago.
 
 ## Compile protocol
 
@@ -25,6 +26,7 @@ export LDFLAGS=-L/usr/local/Cellar/giflib/5.2.1/lib
 mkdir build
 cd build
 ../configure --with-gnutls=ifavailable --with-cairo --with-tree-sitter --with-imagemagick --program-suffix=30 --prefix=/Users/blaine/bin
+# Use 8 processors to speed up make.
 make -j8
 make install -j8
 # Note that the install did not go quite as planned. I resolved the problem by the next steps.
