@@ -10,9 +10,9 @@ It does not seem to have been incorporated by the electronic notebooks yet.
 ## Prerequisites
 You must installed tree-sitter C library before compiling Emacs.
 The [emacs-tree-sitter.el](https://github.com/emacs-tree-sitter/elisp-tree-sitter) package is built into Emacs29 and 30 but not the C library.
-I installed the tree-sitter C library with macports and with homebrew.
-I am not sure which was used when compiling Emacs.
-I had also installed imagemagick with macports or homebrew a long time ago.
+I installed the tree-sitter C library, gnutils, and imagemagick with macports.
+The export to a the giflib could probably have been mapped to the giflib in macports.
+This protocol worked on a 2017 Mac workstation and a 2018 MacBook Pro, both with Mac OS 13.2.
 
 ## Compile protocol
 
@@ -29,12 +29,12 @@ cd build
 # Use 8 processors to speed up make.
 make -j8
 make install -j8
-# Note that the install did not go quite as planned. I resolved the problem by the next steps.
+# Note that the install did not go quite as planned: Nothing appeared in ~/bin. I resolved the problem by the next steps.
 cd nextstep
 cp -R Emacs.app /Applications/Emacs30.0.5tree-sitter.app
 # Make a profile directory
 mkdir ~/latex-tree-emacs30
-# I store this alias in a .bashAppAliases file that I source fromm my .zshrc file.
+# I stored this alias in a .bashAppAliases file that I source fromm my .zshrc file.
 alias e30ltd='/Applications/Emacs30.0.5tree-sitter.app/Contents/MacOS/Emacs --init-directory ~/latex-tree-emacs30 --debug-init'
 e30ltd # Emacs should fire up.
 C-h v
@@ -51,13 +51,13 @@ Note the presence of `TREE_SITTER`.
 ```bash
 "ACL DBUS GIF GLIB GMP GNUTLS IMAGEMAGICK JPEG JSON LCMS2 LIBXML2 MODULES NOTIFY KQUEUE NS PDUMPER PNG RSVG SQLITE3 THREADS TIFF TOOLKIT_SCROLL_BARS TREE_SITTER WEBP XIM ZLIB"
 ```
+The list of features differed somewhat between my two computers because the laptop has more software in macports.
 
 ## Notes
 
 Compiling C-programs on macOS can be a nightmare if you have redundant software package managers installed and you are not an expert C programmer.
 I am only a novice.
 I had installed macports, homebrew, and anaconda.
-Xcode and the associated commandline tools muddy the waters further. 
+Xcode and the associated commandline tools can sometimes muddy the waters further via misplacement of some of the libraries. 
 The `make` program often fails to find a required library, even though it may be present.
-In my case I had to specify the location of one library file with an export command in order to compile.
-My approach may inspire similar solutions when libraries are not found.
+In my case, I had to specify the location of one library file with an export command in order to get the make to finish successfully.
