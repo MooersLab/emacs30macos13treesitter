@@ -6,16 +6,14 @@
 The C-library [tree-sitter](https://tree-sitter.github.io/tree-sitter/) supports the use of the concrete syntax tree during the editing of code.
 This library eases the editing of computer code.
 There is even support for editing LaTeX, Markdown, Org, and reStructuredText.
-Tree-sitter is being deployed by the other major text edtiors like [NeoVim](https://github.com/nvim-treesitter/nvim-treesitter) and [VSCode](https://github.com/georgewfraser/vscode-tree-sitter).
-It does not seem to have been incorporated by the electronic notebooks yet.
-
+Tree-sitter is being deployed by other major text editors, such as [NeoVim](https://github.com/nvim-treesitter/nvim-treesitter) and [VSCode](https://github.com/georgewfraser/vscode-tree-sitter).
 
 ## Prerequisites
-You must installed tree-sitter C library before compiling Emacs.
-The [emacs-tree-sitter.el](https://github.com/emacs-tree-sitter/elisp-tree-sitter) package is built into Emacs29 and 30 but not the C library.
+You must install the tree-sitter C library before compiling Emacs.
+The [emacs-tree-sitter.el](https://github.com/emacs-tree-sitter/elisp-tree-sitter) package is built into Emacs 29 and 30 but not the C library.
 I installed the tree-sitter C library, gnutils, and imagemagick with macports.
-The export to a the giflib could probably have been mapped to the giflib in macports.
-This protocol worked on a 2017 Mac workstation and a 2018 MacBook Pro, both with Mac OS 13.2.
+The export of giflib could probably have been mapped to the giflib in macports.
+This protocol worked on a 2017 Mac workstation and a 2018 MacBook Pro with Mac OS 13.2.
 
 ## Compile protocol
 
@@ -58,9 +56,9 @@ The list of features differed somewhat between my two computers because the lapt
 
 ## Notes
 
-Compiling C-programs on macOS can be a nightmare if you have redundant software package managers installed and you are not an expert C programmer.
+Compiling C-programs on macOS can be a nightmare if you have redundant software package managers installed, and you are not an expert C programmer.
 I am only a novice.
 I had installed macports, homebrew, and anaconda.
-Xcode and the associated commandline tools can sometimes muddy the waters further via misplacement of some of the libraries. 
+Xcode and the associated command line tools can sometimes muddy the waters further via the misplacement of some of the libraries. 
 The `make` program often fails to find a required library, even though it may be present.
-In my case, I had to specify the location of one library file with an export command in order to get the make to finish successfully.
+In my case, I had to specify the location of one library file with an export command for the make to finish successfully.
