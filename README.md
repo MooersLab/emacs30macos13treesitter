@@ -1,3 +1,6 @@
+![Version](https://img.shields.io/static/v1?label=emacs30macos13treesitter&message=0.1&color=brightcolor)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 # Compiling Emacs30 on Ventura (macOS 13.2) with support for tree-sitter
 
 The C-library [tree-sitter](https://tree-sitter.github.io/tree-sitter/) supports the use of the concrete syntax tree during the editing of code.
